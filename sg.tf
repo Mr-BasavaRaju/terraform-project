@@ -1,4 +1,4 @@
-resource "aws_security_group" "three" {
+resource "aws_security_group" "bar" {
  name = "elb-sg"
  ingress {
    from_port = 22
