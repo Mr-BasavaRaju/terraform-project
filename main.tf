@@ -12,11 +12,11 @@ instance_type = "t2.medium"
   availability_zone = "us-east-1a"
   user_data = <<EOF
 #!/bin/bash
-sudo -i
-yum install httpd -y
-systemctl start httpd 
-chkconfig httpd on
-echo "Hai All This is My Zomato Web-Application Created by Terraform Infrastructute By Yashaswini Server-1" > /var/www/html/index.html
+sudo yum update -y
+sudo yum install httpd -y
+sudo systemctl start httpd 
+sudo chkconfig httpd on
+sudo echo "Hai All This is My Zomato Web-Application Created by Terraform Infrastructute By Yashaswini Server-1" > /var/www/html/index.html
 EOF
 tags = {
 Name = "Zomato-1"
@@ -31,11 +31,11 @@ instance_type = "t2.medium"
   availability_zone = "us-east-1b"
   user_data = <<EOF
 #!/bin/bash
-sudo -i
-yum install httpd -y
-systemctl start httpd
-chkconfig httpd on
-echo "Hai All This is My Swiggy Web-Application Created by Terraform Infrastructute By Yashaswini Server-2" > /var/www/html/index.html
+sudo yum update -y
+sudo yum install httpd -y
+sudo systemctl start httpd
+sudo chkconfig httpd on
+sudo echo "Hai All This is My Swiggy Web-Application Created by Terraform Infrastructute By Yashaswini Server-2" > /var/www/html/index.html
 EOF
 tags = {
 Name = "Swiggy-01"
